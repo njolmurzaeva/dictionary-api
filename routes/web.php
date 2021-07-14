@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/translate',[\App\Http\Controllers\WordsController::class,'show']);
+Route::post('/add-words',[\App\Http\Controllers\WordsController::class,'create']);
